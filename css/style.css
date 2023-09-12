@@ -1,0 +1,186 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.pcenter{
+    font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    text-align: center;
+}
+
+/*================= Score =================*/
+.score{
+    position: absolute;
+    top: 30px;
+    right: 0;
+    font-family: VT323;
+    font-size: 50px;
+    padding: 20px;
+    color: rgb(0, 0, 0);
+}
+
+/*================= Scenario =================*/
+.game-board {
+    width: 100%;
+    height: 959px;
+    margin: auto;
+    position: relative;
+    overflow: hidden;
+    background: linear-gradient(#87ceeb, #e0f6ff);
+}
+
+.clouds{
+    position: absolute;
+    width: 550px;
+    animation: clouds-animation 20s infinite linear;
+}
+
+.clouds2{
+    margin: 100px;
+    position: absolute;
+    width: 350px;
+    animation: clouds2-animation 25s infinite linear;
+}
+
+.clouds3{
+    position: absolute;
+    width: 450px;
+    animation: clouds3-animation 29s infinite linear;
+}
+.clouds4{
+    margin: 120px;
+    position: absolute;
+    width: 450px;
+    animation: clouds4-animation 33s infinite linear;
+}
+
+.pipe {
+    position: absolute;
+    bottom: 0;
+    width: 100px;
+    animation: pipe-animation 2s infinite linear;
+}
+
+.floor{
+    position: fixed;
+    top: 959px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    animation: floor-animation 2s infinite linear;
+}
+
+.floor2{
+    position: fixed;
+    top: 959px;
+    bottom: 0;
+    width: 100%;
+    height: auto;
+    animation: floor2-animation 2s infinite linear;
+}
+
+/*================= Character =================*/
+.mario {
+    width: 250 px;
+    position: absolute;
+    bottom: 0;
+}
+
+.jump{
+    animation: jump 500ms ease-out;
+}
+
+/*================= Others =================*/
+footer{
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.social-media a:hover {
+    color: #f00;
+}
+/*================= Animate =================*/
+    @keyframes pipe-animation {
+        from{
+            right: -80px;
+        }
+        to{
+            right: 100%;
+        }
+    }
+
+    @keyframes floor-animation {
+        from{
+            right: 0px;
+        }
+        to{
+            right: 100%;
+        }
+    }
+
+    @keyframes floor2-animation {
+        from{
+            right: -1850px;
+        }
+        to{
+            right: 0%;
+        }
+    }
+
+@keyframes jump {
+    0% {
+        bottom: 0;
+    }
+
+    40%{
+        bottom: 200px;
+    }
+
+    50%{
+        bottom: 200px;
+    }
+
+    60%{
+        bottom: 200px;
+    }
+
+    100%{
+        bottom: 0;
+    }
+}
+
+@keyframes clouds-animation{
+    from{
+        right: -550px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes clouds2-animation{
+    from{
+        right: -1000px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes clouds3-animation{
+    from{
+        right: -1300px;
+    }
+    to{
+        right: 100%;
+    }
+}
+@keyframes clouds4-animation{
+    from{
+        right: -1700px;
+    }
+    to{
+        right: 100%;
+    }
+}
